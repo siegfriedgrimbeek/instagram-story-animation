@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import 'sanitize.css';
 import './css/style.css';
 import Form from './components/Form';
-import Emoji from './components/Emoji';
 
 class App extends Component {
   render() {

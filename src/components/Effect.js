@@ -1,7 +1,5 @@
 // External Dependencies
 import React from 'react';
-import { string } from 'prop-types';
-
 
 //Our Dependancies
 import Emoji from './Emoji';

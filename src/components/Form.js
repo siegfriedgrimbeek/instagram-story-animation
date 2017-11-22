@@ -46,9 +46,7 @@ class Form extends Component {
 
   handleOnClick = (e) => {
     const target = e.target;
-    const value = target.value;
     const name = target.name;
-    const images = this.state.imagesArray;
 
     if(!this.state.transitionActive){
       this.setState({
