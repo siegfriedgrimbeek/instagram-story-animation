@@ -11,9 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form
-          name={"Our Form"}
-        />
+        <Form />
       </div>
     );
   }

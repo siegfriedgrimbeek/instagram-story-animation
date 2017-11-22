@@ -1,21 +1,35 @@
+body {
+  background: #000;
+}
+body .main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
 .emoji-form {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   opacity: 0.5;
   transition: all 0.4s ease-in;
+  padding: 5%;
 }
 .emoji-form .emoji {
   display: inline-block;
+}
+.emoji-form .emoji img {
+  max-width: 100%;
 }
 .emoji-form.visible {
   opacity: 1;
   cursor: pointer;
 }
 .emoji-effect {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -29,6 +43,10 @@
 .emoji-effect .emoji {
   display: block;
   flex-shrink: 0; /* and here! */
+  max-width: 70px;
+}
+.emoji-effect .emoji img {
+  max-width: 100%;
 }
 .emoji-effect .emoji.active {
   animation-name: fadeOut;

@@ -1,13 +1,24 @@
+body
+  background black
+  .main-container
+    max-width 600px
+    margin 0 auto
+    background white
+    position relative
+    overflow hidden
 .emoji-form
   display flex
   align-items center
   justify-content center
   height 100vh
-  width 100vw
+  width 100%
   opacity 0.5
   transition: all 0.4s ease-in
+  padding 5%
   .emoji
     display inline-block
+    img
+      max-width 100%
   &.visible
     opacity 1
     cursor pointer
@@ -18,7 +29,7 @@
  }
 
 .emoji-effect
-  position fixed
+  position absolute
   bottom 0
   width 100%
   .emoji-row
@@ -30,6 +41,9 @@
     .emoji
       display: block;
       flex-shrink: 0; /* and here! */
+      max-width 70px
+      img
+        max-width 100%
       &.active
         animation-name fadeOut
         animation-iteration-count 1

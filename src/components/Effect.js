@@ -9,8 +9,8 @@ import Emoji from './Emoji';
 const Effect = ({icon, screenWidth, transitionActive}) => {
 
   let emoticons = [];
-  let emotiWidth = 128;
-  let emotiCount = screenWidth / emotiWidth;
+  let emotiWidth = screenWidth / 5;
+  let emotiCount = 30;
   let emotiObjectArray = [];
 
   for (let i = 0; i < emotiCount.toFixed(); i++){
@@ -25,6 +25,7 @@ const Effect = ({icon, screenWidth, transitionActive}) => {
       id: i,
       img: icon,
       styles: styles,
+      width: emotiWidth
     });
 
   }
@@ -36,6 +37,7 @@ const Effect = ({icon, screenWidth, transitionActive}) => {
         icon={emoti.img}
         styles={emoti.styles}
         transitionActive={transitionActive}
+        width={emoti.width}
        />
     )
   })

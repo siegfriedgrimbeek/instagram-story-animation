@@ -50,16 +50,18 @@ class Form extends Component {
     const name = target.name;
     const images = this.state.imagesArray;
 
-    this.setState({
-      [name + 'Active']: true,
-      activeEffect: name,
-      transitionActive: true,
-    }, () => stateCallBack());
+    if(!this.state.transitionActive){
+      this.setState({
+        [name + 'Active']: true,
+        activeEffect: name,
+        transitionActive: true,
+      }, () => stateCallBack());
 
-    let stateCallBack = () => {
-      let effectImage = this.getEmoticonImage(name);
-      this.createCrazyEffect(effectImage);
-      setTimeout(function() { this.setState({transitionActive: false}); console.log(this.state) }.bind(this), 3000);
+      let stateCallBack = () => {
+        let effectImage = this.getEmoticonImage(name);
+        this.createCrazyEffect(effectImage);
+        setTimeout(function() { this.setState({transitionActive: false})}.bind(this), 3000);
+      }
     }
   }
 
